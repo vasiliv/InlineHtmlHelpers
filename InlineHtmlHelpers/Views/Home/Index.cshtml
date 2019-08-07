@@ -1,12 +1,25 @@
 ﻿<div>
     @helper MyListHelper(string[] str) {
-    <ul>
-        @foreach (var item in str) {
-            <li>@item</li>
+        if (str.Length == 0) {
+            <label>no data exists</label>
         }
-    </ul>
-    }    
+        else {
+            <ul>
+                @foreach (var item in str) {
+                    <li>@item</li>
+                }
+            </ul>
+        }
+    }
 </div>
 <div>
-    @MyListHelper(new string[] {"Tom", "Diana","Peter"})
+    @MyListHelper(new string[] { "Tom", "Diana", "Peter" })
+</div>
+<br />
+<div>
+    @MyListHelper(new string[] { "Asp.net", "MVC", "Java" })
+</div>
+<br />
+<div>
+    @MyListHelper(new string[] {})
 </div>
