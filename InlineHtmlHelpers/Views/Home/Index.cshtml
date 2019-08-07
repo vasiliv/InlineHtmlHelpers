@@ -1,0 +1,12 @@
+﻿<div>
+    @helper MyListHelper(string[] str) {
+    <ul>
+        @foreach (var item in str) {
+            <li>@item</li>
+        }
+    </ul>
+    }    
+</div>
+<div>
+    @MyListHelper(new string[] {"Tom", "Diana","Peter"})
+</div>
